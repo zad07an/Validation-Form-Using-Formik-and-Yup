@@ -1,0 +1,225 @@
+.registerContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left bottom, rgb(209, 250, 209), rgb(255, 189, 189));
+}
+
+.mainFormContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TODO: Form */
+
+.formContainer {
+  width: 450px;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px 0;
+  border: 1px solid rgba(57, 57, 57, 0.227);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.727);
+  padding: 20px;
+  background: #23323bb9;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+
+.fnlnInputBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 15px;
+}
+
+.fnBox {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lnBox {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.usernameBox {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.emailBox {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ageBox {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.passwordBox {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.confirmPasswordBox {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputsBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px 0;
+}
+
+.registerInput {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #e2e2e2;
+  color: #fff;
+  background: transparent;
+  outline: 0;
+  border-radius: 5px;
+  padding: 0 11px;
+  font-size: 16px;
+}
+
+.registerInput::placeholder {
+  color: #777;
+}
+
+.fnLabel,.lnLabel,.usernameLabel,.emailLabel,.ageLabel,
+.passwordLabel,.confirmPasswordLabel {
+  font-size: 15px;
+  font-weight: 500;
+  color: #e2e2e2;
+}
+
+.fnInput {
+  width: 100%;
+}
+
+.lnInput {
+  width: 100%;
+}
+
+.acceptBox {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px 0;
+  margin-top: 20px;
+}
+
+.checkBoxInputBox {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.checkboxInput {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-color: #385898;
+}
+
+.termsText {
+  font-size: 12px;
+  color: rgb(226, 226, 226);
+}
+
+.linkTerms {
+  color: #2196f3;
+}
+
+.linkTerms:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  background: #1AB187;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s ;
+}
+
+.submitButton:hover {
+  background: #09a579;
+}
+
+.submitButton:active {
+  background: #068f68;
+}
+
+.submitButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.input-error {
+  border-color: #fc8181;
+}
+
+.error-message {
+  font-size: 12px;
+  color: #fc8181;
+}
+
