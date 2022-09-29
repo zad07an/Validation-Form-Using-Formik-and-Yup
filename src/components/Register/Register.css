@@ -1,34 +1,75 @@
 .registerContainer {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to left bottom, rgb(209, 250, 209), rgb(255, 189, 189));
+  background: #1d2639;
 }
 
 .mainFormContainer {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-/* TODO: Form */
+.registerTitleBox {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.registerTitle {
+  font-size: 60px;
+  color: #e7dfdd;
+}
+
+.registerTitleBorder {
+  width: 70%;
+  height: 2px;
+  background: #f5c144;
+}
+
+.registerSubtitleBox {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.registerSubtitle {
+  font-size: 40px;
+  color: #e7dfdd;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.registerDesc {
+  font-size: 40px;
+  color: #f5c144;
+  font-family: jost;
+  letter-spacing: 2px;
+}
 
 .formContainer {
-  width: 450px;
+  width: 600px;
   min-height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 15px 0;
-  border: 1px solid rgba(57, 57, 57, 0.227);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.727);
   padding: 20px;
-  background: #23323bb9;
+  background: #465975;
   backdrop-filter: blur(5px);
   border-radius: 10px;
 }
@@ -123,9 +164,9 @@
 .registerInput {
   width: 100%;
   height: 40px;
-  border: 2px solid #e2e2e2;
-  color: #fff;
-  background: transparent;
+  border: 2px solid #fafafa;
+  color: #000;
+  background: #fafafa;
   outline: 0;
   border-radius: 5px;
   padding: 0 11px;
@@ -195,18 +236,18 @@
   font-weight: 500;
   border-radius: 5px;
   border: none;
-  background: #1AB187;
-  color: #fff;
+  background: #f5c144;
+  color: #fafafa;
   cursor: pointer;
   transition: 0.1s ;
 }
 
 .submitButton:hover {
-  background: #09a579;
+  background: #f7cc69;
 }
 
 .submitButton:active {
-  background: #068f68;
+  background: #d3a02a;
 }
 
 .submitButton:disabled {
@@ -214,12 +255,21 @@
   cursor: default;
 }
 
+.loginLinkText {
+  color: #2196f3;
+  font-weight: 300;
+}
+
+.loginLinkText:hover {
+  text-decoration: underline;
+}
+
 .input-error {
-  border-color: #fc8181;
+  border-color: red;
 }
 
 .error-message {
   font-size: 12px;
-  color: #fc8181;
+  color: red;
 }
 

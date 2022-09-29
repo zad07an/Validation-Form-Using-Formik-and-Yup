@@ -1,5 +1,6 @@
 import { useFormik } from 'formik'
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { registerSchema } from '../../Schemas/Schemas'
 import './Register.css'
 
@@ -28,10 +29,18 @@ export default function Register() {
   return (
     <div className='registerContainer'>
       <div className="mainFormContainer">
+        <div className="registerTitleBox">
+          <h2 className="registerTitle">Sign <span style={{color: '#f5c144'}}>Up</span></h2>
+          <span className='registerTitleBorder'></span>
+          <div className="registerSubtitleBox">
+            <h3 className="registerSubtitle"><span style={{color: '#f5c144'}}>Start</span> your journey</h3>
+            <p className="registerDesc">today</p>
+          </div>
+        </div>
         <form className='formContainer' onSubmit={formik.handleSubmit}>
           <div className="fnlnInputBox">
             <div className="fnBox">
-              <label htmlFor="" className='fnLabel'>First name</label>
+              <label htmlFor="firstName" className='fnLabel'>First name</label>
               <input
                 type="text"
                 className={`fnInput registerInput ${formik.errors.firstName && formik.touched.firstName ? 'input-error' : ''}`}
@@ -44,7 +53,7 @@ export default function Register() {
               {formik.errors.firstName && formik.touched.firstName ? <span className='error-message'>{formik.errors.firstName}</span> : null}
             </div>
             <div className="lnBox">
-              <label htmlFor="" className="lnLabel">Last name</label>
+              <label htmlFor="lastName" className="lnLabel">Last name</label>
               <input
                 type="text"
                 className={`lnInput registerInput ${formik.errors.lastName && formik.touched.lastName ? 'input-error' : ''}`}
@@ -59,7 +68,7 @@ export default function Register() {
           </div>
           <div className="inputsBox">
             <div className="usernameBox">
-              <label htmlFor="" className="usernameLabel">Username</label>
+              <label htmlFor="userName" className="usernameLabel">Username</label>
               <input
                 type="text"
                 className={`usernameInput registerInput ${formik.errors.userName && formik.touched.userName ? 'input-error' : ''}`}
@@ -72,7 +81,7 @@ export default function Register() {
               {formik.errors.userName && formik.touched.userName ? <span className='error-message'>{formik.errors.userName}</span> : null}
             </div>
             <div className="emailBox">
-              <label htmlFor="" className="emailLabel">Email</label>
+              <label htmlFor="email" className="emailLabel">Email</label>
               <input
                 type="email"
                 className={`emailInput registerInput ${formik.errors.email && formik.touched.email ? 'input-error' : ''}`}
@@ -85,7 +94,7 @@ export default function Register() {
               {formik.errors.email && formik.touched.email ? <span className='error-message'>{formik.errors.email}</span> : null}
             </div>
             <div className="ageBox">
-              <label htmlFor="" className="ageLabel">Age</label>
+              <label htmlFor="age" className="ageLabel">Age</label>
               <input
                 type="number"
                 className={`ageInput registerInput ${formik.errors.age && formik.touched.age ? 'input-error' : ''}`}
@@ -98,7 +107,7 @@ export default function Register() {
               {formik.errors.age && formik.touched.age ? <span className='error-message'>{formik.errors.age}</span> : null}
             </div>
             <div className="passwordBox">
-              <label htmlFor="" className="passwordLabel">Password</label>
+              <label htmlFor="password" className="passwordLabel">Password</label>
               <input
                 type="password"
                 className={`passwordInput registerInput ${formik.errors.password && formik.touched.password ? 'input-error' : ''}`}
@@ -111,7 +120,7 @@ export default function Register() {
               {formik.errors.password && formik.touched.password ? <span className='error-message'>{formik.errors.password}</span> : null}
             </div>
             <div className="confirmPasswordBox">
-              <label htmlFor="" className="confirmPasswordLabel">Confirm Password</label>
+              <label htmlFor="confirmPassword" className="confirmPasswordLabel">Confirm Password</label>
               <input
                 type="password"
                 className={`confirmPasswordInput registerInput ${formik.errors.confirmPassword && formik.touched.confirmPassword ? 'input-error' : ''}`}
@@ -128,11 +137,12 @@ export default function Register() {
                 <input
                   type="checkbox"
                   className='checkboxInput'
+                  id='checkBox'
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   checked={formik.values.checkBox}
                   name='checkBox' />
-                <span className='termsText'>By signing up you agree to our <a href="#" className='linkTerms'>Terms</a> of Service.</span>
+                <label htmlFor='checkBox' className='termsText'>By signing up you agree to our <a href="#" className='linkTerms'>Terms</a> of Service.</label>
               </div>
               <div className="checkBoxErrorBox">
                 {
@@ -142,6 +152,9 @@ export default function Register() {
             </div>
           </div>
           <button type="submit" disabled={formik.isSubmitting} className="submitButton">Register</button>
+          <div className="loginLinkBox">
+            <Link to='/' className="loginLinkText">Already have an account?</Link>
+          </div>
         </form>
       </div>
     </div>

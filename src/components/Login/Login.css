@@ -1,0 +1,112 @@
+.loginContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background: #1d2639;
+}
+
+.loginTitleBox {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+}
+
+.loginTitle {
+  font-size: 50px;
+  color: #e7dfdd;
+}
+
+.loginForm {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: #465975;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.loginText {
+  font-size: 30px;
+  color: #fafafa;
+}
+
+.loginInputsContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginInputBoxes {
+  width: 100%;
+  min-height: 60px;
+}
+
+.loginInputs {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid gray;
+}
+
+.loginInputs::placeholder {
+  font-size: 16px;
+}
+
+.loginSubmitButtonBox {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginSubmitButton {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  background: #f5c144;
+  color: #fafafa;
+  cursor: pointer;
+  transition: 0.1s ;
+}
+  
+.loginSubmitButton:hover {
+  background: #f7cc69;
+}
+
+.loginSubmitButton:active {
+  background: #d3a02a;
+}
+
+.loginSubmitButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.registerLinkText {
+  color: #2196f3;
+  font-weight: 300;
+}
+
+.registerLinkText:hover {
+  text-decoration: underline;
+}

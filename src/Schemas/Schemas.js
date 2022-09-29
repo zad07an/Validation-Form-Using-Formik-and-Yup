@@ -16,3 +16,10 @@ export const registerSchema = yup.object().shape({
     .boolean()
     .oneOf([true], 'Please accept the Terms of service') 
 })
+
+export const loginSchema = yup.object().shape({
+  email: yup.string().email('Incorrect email').required('Required'),
+  password: yup.string().min(5).max(20)
+  .matches(passwordRule, {message: 'Incorrect password'})
+  .required('Required'),
+})
